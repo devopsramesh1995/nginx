@@ -244,6 +244,8 @@ ngx_http_v2_header_filter(ngx_http_request_t *r)
 
         ct_len = r->headers_out.content_type.len;
 
+        /* must match the charset expansion done when writing Content-Type */
+
         if (r->headers_out.content_type_len == r->headers_out.content_type.len
             && r->headers_out.charset.len)
         {
